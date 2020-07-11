@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <style>
+        * {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  padding: 10px;
+  background: rgb(46, 60, 86);
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+div {
+  width: 100%;
+  font-size: 25px;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+}
+input {
+  height: 25px;
+  font-size: 25px;
+  color: rgba(255, 255, 255, 0.25);
+  width: 100%;
+  margin-bottom:15px;
+  background: transparent;
+  border: 0px solid white;
+  border-bottom: 1px solid transparent;
+  outline: none;
+  transition: all 0.5s ease;
+}
+input:focus {
+  color: rgba(255, 255, 255, 0.7);
+  border: 0px solid transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+}
+input:hover {
+  color: rgba(255, 255, 255, 0.7);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+}
+button {
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  width: 100%;
+  font-size: 25px;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.5s ease;
+}
+button:hover {
+  margin-left: 5%;
+  color: rgb(46, 60, 86);
+  background: rgba(255, 255, 255, 0.7);
+  width: 90%;
+}
+    </style>
+
+    <body>
+        <div class='Title'>Fairseq Translator</div>
+        <br><br>
+
+        <input class='targetLanguage' value='French' disabled>
+        <br>
+
+        <form action="" method="post">
+          {% csrf_token %}
+          <input class='sourceText' name="sourceText" placeholder='Hello World!'>
+          <input type="text" class='targetText' placeholder='Translation' value="{{translated_text}}" style="padding-bottom: 200px; padding-top: 32px; border: 1px solid; padding-left: 20px;" disabled>
+          <button type="submit">Translate</button>
+        </form>
+        
+        <br><br><br>
+        
+
+    </body>
+</html>
