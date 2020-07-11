@@ -67,7 +67,7 @@ button:hover {
 
         <form action="" method="post">
           {% csrf_token %}
-          <input class='sourceText' name="sourceText" placeholder='Hello World!'>
+          <input class='sourceText' name="sourceText" placeholder='Hello World!' required>
           <input type="text" class='targetText' placeholder='Translation' value="{{translated_text}}" style="padding-bottom: 200px; padding-top: 32px; border: 1px solid; padding-left: 20px;" disabled>
           <button type="submit">Translate</button>
         </form>

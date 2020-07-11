@@ -4,10 +4,11 @@ import json
 
 # Create your views here.
 def index(request):
-	template_name = 'fairseq.html'
+	template_name = 'index.html'
+	input_text = ""
 	if request.method == 'POST':
-		if request.POST.get('sourceText') == None:
-			input_text = ""
+		# if request.POST.get('sourceText') == None:
+		# 	input_text = ""
 		input_text = request.POST.get('sourceText')
 	
 	en2fr = english_to_french(input_text).replace("&apos;", "\'")
