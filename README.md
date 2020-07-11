@@ -1,4 +1,5 @@
 # Pytorch Translator Web App
+<img style="width: 100%;" src="screenshot.png">
 
 ## Introduction
 This translation web app is built using Pytorch, Fairseq, and Django. The current version can translate text from English to French but with future updates I will add new languages.
